@@ -21,10 +21,11 @@ import AdminRoute from "./AdminRoute";
 const drawerWidth = 200;
 
 const Dashboard = (props) => {
+  // const { logOut } = useAuth();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
-  const { admin } = useAuth();
+  const { admin,logOut } = useAuth();
   console.log(admin);
 
   const handleDrawerToggle = () => {
@@ -58,6 +59,10 @@ const Dashboard = (props) => {
             </Link>{" "}
           </Box>
         )}
+        <Link to={`${url}`}>
+          {" "}
+          <Button onClick={logOut} color="inherit"> LogOut</Button>{" "}
+        </Link>
         
       </List>
     </div>
