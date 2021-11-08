@@ -53,7 +53,7 @@ const AppointmentData = ({ date }) => {
     })
       .then((res) => res.json())
       .then((data) => setAppointments(data));
-  }, [date]);
+  }, [user.email,token,date]);
   /////////////////////////////////////////////////////////////////////////////////
 
   return (

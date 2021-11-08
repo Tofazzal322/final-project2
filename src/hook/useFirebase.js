@@ -107,7 +107,7 @@ const useFirebase = () => {
         getIdToken(user)
           .then(idToken => {
             setToken(idToken);
-            console.log(idToken);
+            // console.log(idToken);
         })
       } else {
         setUser({});
@@ -115,7 +115,7 @@ const useFirebase = () => {
       setIsLoading(false);
     });
     return () => unsubscribed;
-  }, []);
+  }, [auth]);
 
   /////////////////////// Check Admin and   Admin Data Load  //////////////////////
   useEffect(() => {

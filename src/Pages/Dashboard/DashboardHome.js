@@ -3,8 +3,8 @@ import { Grid } from "@mui/material";
 import Calendar from "../Shared/Calendar";
 import AppointmentData from "./AppointmentData";
 import Typography from "@mui/material/Typography";
-import Footer from "../Shared/Footer";
-import Navigation from "../Shared/Navigation";
+
+
 
 
 const DashboardHome = () => {
