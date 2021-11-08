@@ -119,9 +119,9 @@ const useFirebase = () => {
 
   /////////////////////// Check Admin and   Admin Data Load  //////////////////////
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
-      .then(res => res.json())
-    .then(data=>setAdmin(data.admin))
+    fetch(`https://lit-harbor-41699.herokuapp.com/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
   }, [user.email]);
 
   ////////////////////////// Log-out  From Ui  /////////////////////////////
@@ -141,30 +141,28 @@ const useFirebase = () => {
   ////////////////////////// Save User To database //////////////////////////////
 
   const saveUserToDatabase = (email, displayName) => {
-    const user = { email, displayName }
-    fetch('http://localhost:5000/users', {
-      method: 'POST',
+    const user = { email, displayName };
+    fetch("https://lit-harbor-41699.herokuapp.com/users", {
+      method: "POST",
       headers: {
-        'content-type':'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(user)
-    })
-    .then()
-}
-///////////////////////////////////////////////////////////////////////////
-  
-///////////////////////// Save Google User To database   ////////////////////////////////
+      body: JSON.stringify(user),
+    }).then();
+  };
+  ///////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////// Save Google User To database   ////////////////////////////////
   const saveGoogleUserToDatabase = (email, displayName) => {
-    const user = { email, displayName }
-    fetch('http://localhost:5000/users', {
-      method: 'PUT',
+    const user = { email, displayName };
+    fetch("https://lit-harbor-41699.herokuapp.com/users", {
+      method: "PUT",
       headers: {
-        'content-type':'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(user)
-    })
-    .then()
-  }
+      body: JSON.stringify(user),
+    }).then();
+  };
 ////////////////////////////////////////////////////////////////////////////  
   
 

@@ -44,20 +44,20 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
             date: date.toLocaleDateString()
         }
         // send to the server
-        fetch('http://localhost:5000/appointments', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(appointment)
+        fetch("https://lit-harbor-41699.herokuapp.com/appointments", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(appointment),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    setBookingSuccess(true);
-                    handleBookingClose();
-                }
-            });
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              setBookingSuccess(true);
+              handleBookingClose();
+            }
+          });
 
         e.preventDefault();
     }
