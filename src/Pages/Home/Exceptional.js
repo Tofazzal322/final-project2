@@ -2,6 +2,7 @@ import { Button, Container, Grid, Typography } from "@mui/material";
 // import { fontSize } from "@mui/system";
 import React from "react";
 import dentalImg from "../../images/treatment.png";
+import { MyButton } from "../StyleComponent/MuiButton";
 
 const Exceptional = () => {
   return (
@@ -27,7 +28,8 @@ const Exceptional = () => {
             Vel exercitationem officiis, ipsum qui ex laborum suscipit animi
             magnam
           </Typography>
-          <Button
+          <MyButton> Learn More</MyButton>
+          {/* <Button
             sx={{
               mt: 3,
               background: "linear-gradient(to right, #33ccff 0%, #ff99cc 100%)",
@@ -36,7 +38,7 @@ const Exceptional = () => {
           >
             {" "}
             Learn More
-          </Button>
+          </Button> */}
         </Grid>
       </Grid>
     </Container>

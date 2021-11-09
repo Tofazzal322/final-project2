@@ -5,6 +5,7 @@ import { Button, CardMedia, Container, Typography } from "@mui/material";
 // import doctorBig from "../../images/doctor.png";
 import bg from "../../images/chair.png";
 import chair from "../../images/chair.png";
+import MuiButton, { MyButton } from "../StyleComponent/MuiButton";
 
 const bannerBg = {
   background: `url(${bg})`,
@@ -40,20 +41,7 @@ const Banner = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
               veniam possimus rerum impedit iure ad?{" "}
             </Typography>
-            <Button
-              variant="outlined"
-              sx={{
-                textAlign: "left",
-                backgroundColor: "#49E7D6 ",
-                color: "white",
-                mt: 2,
-                fontWeight: "bold",
-                p: 2,
-              }}
-            >
-              {" "}
-              APPOINTMENT
-            </Button>
+            <MyButton> Get Appointment</MyButton>
           </Grid>
           <Grid xs={12} md={6}>
             <CardMedia>

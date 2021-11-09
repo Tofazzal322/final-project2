@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import { Button, CardMedia, Container, Typography } from "@mui/material";
 import doctorBig from "../../images/doctor.png";
 import bg from "../../images/appointment-bg.png";
+import { MyButton } from "../StyleComponent/MuiButton";
 
 const appointmentBg = {
   background: `url(${bg})`,
@@ -33,7 +34,7 @@ const AppointmentBanner = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
               veniam possimus rerum impedit iure ad?{" "}
             </Typography>
-            <Button variant="outlined" sx={{textAlign:'left', background: "linear-gradient(to right, #33ccff 0%, #ff99cc 100%)", color:'white', mt:2, fontWeight:'bold', p:2}} > APPOINTMENT</Button>
+            <MyButton> APPOINTMENT </MyButton>
           </Grid>
         </Grid>
       </Container>

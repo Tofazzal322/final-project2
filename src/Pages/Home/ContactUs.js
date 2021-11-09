@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Container, Grid, Typography } from "@mui/material";
+import { MyButton, MyButton2 } from "../StyleComponent/MuiButton";
 // import { TextFields } from "@mui/icons-material";
 
 const ContactUs = () => {
@@ -57,7 +58,8 @@ const ContactUs = () => {
             label="Yor Message*"
             id="message"
           />
-          <Button
+          <MyButton2 fullWidth> Submit </MyButton2>
+          {/* <Button
             variant="contained"
             fullWidth
             sx={{
@@ -69,7 +71,7 @@ const ContactUs = () => {
           >
             {" "}
             Submit
-          </Button>
+          </Button> */}
         </Grid>
       </Container>
     </Box>

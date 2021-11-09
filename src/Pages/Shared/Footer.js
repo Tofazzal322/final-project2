@@ -1,6 +1,6 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+// import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import '../../../src/style.css'
 import './Footer.css'
@@ -9,7 +9,7 @@ import './Footer.css'
 const Footer = () => {
   return (
       <div className=" footer-main p-5 mt-5 fixed">
-          <Row >
+          {/* <Row >
          
         <Col xs={12} md={4}>
         <div>
@@ -58,7 +58,7 @@ const Footer = () => {
 
               </Col>
 
-          </Row>
+          </Row> */}
     </div>
   );
 };
